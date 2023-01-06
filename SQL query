@@ -1,0 +1,133 @@
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202201`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202202`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202203`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202204`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202205`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202206`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202207`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202208`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202209`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202210`;
+
+INSERT INTO `BIKE`.`202112`
+SELECT *
+FROM `BIKE`.`202211`;
+
+SELECT *
+FROM `BIKE`.`202112` AS combined
+ORDER BY started_at;
+
+-- total number of rows
+SELECT COUNT(*)
+FROM `BIKE`.`202112` AS combined;
+
+-- average ride length
+SELECT AVG(ride_length) AS avg_ride_length
+FROM `BIKE`.`202112` AS combined;
+
+-- maximum ride length
+SELECT MAX(ride_length) AS max_ride_length
+FROM `BIKE`.`202112` AS combined;
+
+-- minimum ride length
+SELECT MIN(ride_length) AS min_ride_length
+FROM `BIKE`.`202112` AS combined;
+
+-- why min_ride_length is #
+SELECT *
+FROM `BIKE`.`202112` AS combined
+ORDER BY ride_length;
+
+SELECT *
+FROM `BIKE`.`202112` AS combined
+WHERE ride_id='0793C9208A64302A';
+
+DELETE FROM `BIKE`.`202112`
+WHERE ride_id='0793C9208A64302A';
+
+SELECT *
+FROM `BIKE`.`202112` AS combined
+ORDER BY ride_length
+LIMIT 10;
+
+-- pie chart 
+SELECT member_casual, COUNT(member_casual) AS number_each_type
+FROM `BIKE`.`202112` AS combined
+GROUP BY member_casual
+
+-- average ride length of member_casual
+SELECT member_casual, AVG(ride_length) AS average_ride_length
+FROM `BIKE`.`202112` as Combined
+GROUP BY member_casual;
+
+-- average ride length by bike type
+SELECT rideable_type, AVG(ride_length) AS avg_ride_length
+FROM `BIKE`.`202112` as Combined
+GROUP BY rideable_type;
+
+UPDATE `BIKE`.`202112`
+SET  
+	day_of_week = 
+            CASE
+                WHEN day_of_week = '1' THEN 'Sunday'
+                WHEN day_of_week = '2' THEN 'Monday'
+                WHEN day_of_week = '3' THEN 'Tuesday'
+                WHEN day_of_week = '4' THEN 'Wednesday'
+                WHEN day_of_week = '5' THEN 'Thursday'
+                WHEN day_of_week = '6' THEN 'Friday'
+                WHEN day_of_week = '7' THEN 'Saturday' 
+            END
+WHERE
+        day_of_week IN ('1', '2', '3', '4', '5', '6', '7');
+				
+-- total bike rides by day		
+SELECT member_casual, day_of_week, COUNT(ride_id) AS rides
+FROM `BIKE`.`202112` AS combined
+GROUP BY member_casual, day_of_week
+ORDER BY day_of_week;
+
+-- total bike rides by bike type
+SELECT member_casual, rideable_type, COUNT(ride_id) AS rides
+FROM `BIKE`.`202112` AS combined
+GROUP BY member_casual, rideable_type;
+
+-- starting stations
+SELECT start_station_name, member_casual,start_lat, start_lng, COUNT(ride_id) AS rides_started_here
+FROM `BIKE`.`202112` AS combined
+WHERE start_station_name IS NOT NULL
+GROUP BY start_station_name, member_casual,start_lat, start_lng;
+
+-- end stations
+SELECT end_station_name, end_lat, end_lng, COUNT(ride_id) AS rides_started_here
+FROM `BIKE`.`202112` AS combined
+WHERE end_station_name IS NOT NULL
+GROUP BY end_station_name, end_lat, end_lng;
