@@ -188,34 +188,34 @@ FROM `BIKE project`.`202212` combined
 GROUP BY member_casual, started_at
 ORDER BY started_at;
 
--- Top 10 starting stations by casual riders
+-- Top 5 starting stations by casual riders
 SELECT start_station_name, member_casual, start_lat, start_lng, COUNT(ride_id) AS rides_started_here
 FROM `BIKE project`.`202212` combined
 WHERE member_casual= 'casual'
 GROUP BY start_station_name, member_casual, start_lat, start_lng
 ORDER BY rides_started_here DESC
-LIMIT 10;
+LIMIT 5;
 
--- Top 10 starting stations by members
+-- Top 5 starting stations by members
 SELECT start_station_name, member_casual, start_lat, start_lng, COUNT(ride_id) AS rides_started_here
 FROM `BIKE project`.`202212` combined
 WHERE member_casual= 'member'
 GROUP BY start_station_name, member_casual, start_lat, start_lng
 ORDER BY rides_started_here DESC
-LIMIT 10;
+LIMIT 5;
 
--- Top 10 ending stations by members
+-- Top 5 ending stations by members
 SELECT end_station_name, member_casual, end_lat, end_lng, COUNT(ride_id) AS rides_ended_here
 FROM `BIKE project`.`202212` combined
 WHERE member_casual= 'member'
 GROUP BY end_station_name, member_casual, end_lat, end_lng
 ORDER BY rides_ended_here DESC
-LIMIT 10;
+LIMIT 5;
 
--- Top 10 ending stations by casual riders
+-- Top 5 ending stations by casual riders
 SELECT end_station_name, member_casual, end_lat, end_lng, COUNT(ride_id) AS rides_ended_here
 FROM `BIKE project`.`202212` combined
 WHERE member_casual= 'casual'
 GROUP BY end_station_name, member_casual, end_lat, end_lng
 ORDER BY rides_ended_here DESC
-LIMIT 10;
+LIMIT 5;
