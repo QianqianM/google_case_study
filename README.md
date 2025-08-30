@@ -32,9 +32,11 @@ Created new calculated fields:
 ride_length (trip duration)
 day_of_week (numeric weekday value)
 Filtered out trips with zero or negative ride durations
+
 **2️⃣ Initial Exploration (Excel)**
 Built pivot tables for quick pattern recognition
 Performed basic descriptive statistics
+
 **3️⃣ Deeper Analysis (SQL & Visualization)**
 Combined and queried multiple months of trip data
 Created clear, professional visuals and dashboards to share findings with stakeholders
