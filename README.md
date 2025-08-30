@@ -13,8 +13,11 @@ Ask → Prepare → Process → Analyze → Share → Act
 **📊 Key Insights**
 
 Casual riders tend to ride mostly on weekends and for leisure.
+
 Annual members ride more during weekdays, often for commuting.
+
 Members’ ride durations are generally shorter but more frequent.
+
 Marketing opportunities exist in targeting casual riders who frequently rent during peak seasons.
 
 **🛠️ Tools & Skills Used**
@@ -27,7 +30,9 @@ Tableau – Data visualization and dashboard creation
 
 **1️⃣ Data Cleaning (Excel)**
 Removed duplicates and null values
+
 Converted started_at and ended_at to short date format
+
 Created new calculated fields:
 ride_length (trip duration)
 day_of_week (numeric weekday value)
