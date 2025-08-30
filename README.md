@@ -23,7 +23,9 @@ Marketing opportunities exist in targeting casual riders who frequently rent dur
 **🛠️ Tools & Skills Used**
 
 Excel – Initial cleaning, duplicate removal, pivot tables, and exploratory calculations
+
 SQL – Data storage, transformation, and deeper analysis
+
 Tableau – Data visualization and dashboard creation
 
 **🔍 My Approach**
@@ -36,19 +38,23 @@ Converted started_at and ended_at to short date format
 Created new calculated fields:
 ride_length (trip duration)
 day_of_week (numeric weekday value)
+
 Filtered out trips with zero or negative ride durations
 
 **2️⃣ Initial Exploration (Excel)**
 Built pivot tables for quick pattern recognition
+
 Performed basic descriptive statistics
 
 **3️⃣ Deeper Analysis (SQL & Visualization)**
 Combined and queried multiple months of trip data
+
 Created clear, professional visuals and dashboards to share findings with stakeholders
 
 **📈 Outcomes**
 
 Identified clear behavioral differences between casual riders and members
+
 Suggested marketing strategies to:
 Promote annual memberships to casual riders who frequently ride during weekends
 Emphasize cost-effectiveness and convenience for commuters
