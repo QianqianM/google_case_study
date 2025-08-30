@@ -1,6 +1,7 @@
 🚴 How Does a Bike-Share Navigate Speedy Success?
 [🔗 View the full project here](https://qianqianm.github.io/GoogleCaseStudy/)
 
+
 **📌 Overview**
 
 This project is part of the Google Data Analytics Capstone Case Study.
@@ -9,6 +10,7 @@ How do casual riders and annual members use Cyclistic bikes differently, and how
 
 The analysis follows the six-step data analysis process:
 Ask → Prepare → Process → Analyze → Share → Act
+
 
 **📊 Key Insights**
 
@@ -20,6 +22,7 @@ Members’ ride durations are generally shorter but more frequent.
 
 Marketing opportunities exist in targeting casual riders who frequently rent during peak seasons.
 
+
 **🛠️ Tools & Skills Used**
 
 Excel – Initial cleaning, duplicate removal, pivot tables, and exploratory calculations
@@ -27,6 +30,7 @@ Excel – Initial cleaning, duplicate removal, pivot tables, and exploratory cal
 SQL – Data storage, transformation, and deeper analysis
 
 Tableau – Data visualization and dashboard creation
+
 
 **🔍 My Approach**
 
@@ -51,6 +55,7 @@ Combined and queried multiple months of trip data
 
 Created clear, professional visuals and dashboards to share findings with stakeholders
 
+
 **📈 Outcomes**
 
 Identified clear behavioral differences between casual riders and members
@@ -58,6 +63,7 @@ Identified clear behavioral differences between casual riders and members
 Suggested marketing strategies to:
 Promote annual memberships to casual riders who frequently ride during weekends
 Emphasize cost-effectiveness and convenience for commuters
+
 
 **🚀 Next Steps**
 
